@@ -10,11 +10,11 @@ app.use(express.json());
 
 app.use("/api/categories", categoryRouter);
 
-const MONGODB_URI =
+const MONGODB_URL =
   "mongodb+srv://navatha:123@cluster0.qlewb.mongodb.net/NGOEVENTS?retryWrites=true&w=majority";
 
 mongoose
-  .connect(MONGODB_URI || "mongodb://localhost/session12", {
+  .connect(MONGODB_URL || "mongodb://localhost/session12", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
